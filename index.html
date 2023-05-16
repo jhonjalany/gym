@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym</title>
+  <style>
+    /*---------BODY---------------*/
+    body {
+      background-image: url("home-pic.jpg");
+      background-repeat: no-repeat;
+      background-size:  100% 100vh;
+      background-color: black;
+      padding-bottom: 20px;
+    }
+    /*-------------Header-------------------------*/
+    .header {
+      background-color: black;
+      height: 80px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    .buttons {
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      transition: 300ms;
+    }
+    .buttons:hover {
+      font-size: 30px;
+    }
+    /*--------------Home---------------*/
+    .home {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+    .home-text {
+      color: white;
+      font-size: 115px;
+    }
+    .logo {
+      height: 100px;
+    }
+    span {
+      color: rgb(243, 109, 0);
+    }
+    .meaning {
+      color: white;
+      font-size: 25px;
+    }
+    .join {
+      margin-top: 20px;
+      font-size: 25px ;
+      font-weight: bold;
+      border-radius: 10px;
+      border-style: none;
+      background-color: rgb(243, 109, 0);
+      cursor: pointer;
+    }
+
+    /*------------Work-outs-----------------*/
+    p {
+      margin-top: 120px;
+      color: white;
+      font-size: 50px;
+      text-align: center;
+    }
+    .plan {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+    .plan-vid {
+      width: 1000px;
+      height: 560px;
+    }
+    /*--------------Equipment---------------------*/
+    .equipments {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .equipment {
+      height: 500px;
+      width: 500px;
+    }
+    /*----------About-------------------------*/
+    .about-p {
+      font-size: 25px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .about-meaning {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    .about-mean {
+      color: white;
+      font-size: 20px;
+    }
+
+    /*---------------Contact-------------------------*/
+    .contact-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: rgb(255, 255, 255);
+      width: 15%;
+      padding: 20px;
+    }
+    .icons {
+      height: 100px;
+    }
+    .icon-name {
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+    .details {
+      color: rgb(0, 0, 0);
+    }
+
+    .contact-form {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background-color: rgb(98, 144, 243);
+      width: 50%;
+      margin-left: 25%;
+      margin-right: 25%;
+      height: 50vh;
+    }
+    .contact-us {
+      color: rgb(0, 0, 0);
+      font-size: 40px;
+    }
+    .forms {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .name-input {
+      font-size: 14px;
+      width: 300px;
+      padding: 5px;
+      background-color: white;
+      color: black;
+      border: none;
+    }
+    .message {
+      font-size: 14px;
+      width: 300px;
+      height: 100px;
+      padding: 5px;
+      background-color: white;
+      color: black;
+      border: none;
+    }
+    .send-button {
+      font-size: 15px;
+      font-weight: bold;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 5px;
+      border-style: none;
+      cursor: pointer;
+    }
+
+    /*-----------------HTML-----------------*/
+    html {
+      scroll-behavior: smooth;
+    }
+    @media screen and (width <= 500px) {
+
+      /*------------body---------------------*/
+      body {
+      background-size:  100% ;
+      background-color: black;
+      }
+
+      /*--------header-----------------------*/
+      .header {
+      height: 30px;
+      }
+      .logo {
+        height: 25px;
+      }
+      .buttons {
+      font-size: 10px;
+      }
+      .buttons:hover {
+      font-size: 15px;
+      }
+
+      /*------------HOME----------------------*/
+      .home {
+        height: 30vh;
+      }
+      .home-text {
+      font-size: 40px;
+      }
+      .meaning {
+        font-size: 8px;
+      }
+      .join {
+      margin-top: 10px;
+      font-size: 15px ;
+      border-radius: 6px;
+      }
+
+      /*---------------Work-outs-------------------------------*/
+      p {
+        font-size: 25px;
+        margin-top: 50px;
+      }
+      .plan {
+        gap: 20px;
+      }
+      .plan-vid {
+        width: 300px;
+        height: 169px;
+      }
+
+      /*-----------equipments--------------*/
+      .equipment {
+        width: 100px;
+        height: 100px;
+      }
+
+      /*-----------About us ---------------*/
+      .about-p {
+        font-size: 8px;
+        margin-bottom: 5px;
+      }
+      .about-mean {
+        font-size: 7px;
+        text-align: center;
+      }
+
+      /*--------------Contact-------------------*/
+      .contact {
+        padding: 3px;
+        width: 25%;
+        height: 80px;
+        gap: 5px;
+      }
+      .icons {
+        height: 20px;
+      }
+      .icon-name {
+        font-size: 8px;
+      }
+      .details {
+        font-size: 5px;
+      }
+      .contact-form {
+        margin-top: -15px;
+        gap: 10px;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+        height: 30vh;
+      }
+      .contact-us {
+        font-size: 15px;
+        margin-top: 35px;
+      }
+      .forms {
+        gap: 5px;
+      }
+      .name-input {
+        font-size: 8px;
+        width: 150px;
+        padding: 3px;
+        
+      }
+      .message {
+        font-size: 8px;
+        width: 146px;
+        height: 50px;
+        
+      }
+      .send-button {
+        font-size: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <img class="logo" src="logo.png" alt="">
+    </div>
+    <div>
+      <a class="buttons" href="#home">Home</a>
+    </div>
+    <div>
+      <a class="buttons" href="#workout">Work-outs</a>
+    </div>
+    <div>
+      <a class="buttons" href="#equipment">Equipments</a>
+    </div>
+    <div>
+      <a class="buttons" href="#about">About us</a>
+    </div>
+    <div>
+      <a class="buttons" href="#contact">Contact</a>
+    </div>
+    
+  </div>
+  <div id="home" class="home">
+    <div class="home-text">
+      No <span>Pain</span> No <span>Gain</span>
+    </div>
+    <div class="meaning">
+      "Transform Your Body, Ignite Your Potential, and Embrace a Healthier Lifestyle with Us!"
+    </div>
+    <div>
+      <a href="join.html"><button class="join">Join Now</button></a>
+    </div>
+  </div>
+  
+  <div class="plan">
+    <div>
+      <p id="workout">Work-out plan</p>
+    </div>
+    <div class="plan-vid">
+       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VqXLFffiU2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="plan-vid">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/R2TbcQDAVkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+  <p id="equipment">Equipments</p>
+  <div class="equipments">
+    <div>
+      <img class="equipment" src="equipment2.jpg" alt="">
+    </div>
+    <div>
+      <img class="equipment" src="equipment6.jpg" alt="">
+    </div>
+    <div>
+      <img class="equipment" src="equipment4.jpg" alt="">
+    </div>
+    <div>
+      <img class="equipment" src="equipment5.jpg" alt="">
+    </div>
+    <div>
+      <img class="equipment" src="equipment3.jpg" alt="">
+    </div>
+  </div>
+  <p id="about">About us</p>
+  <p class="about-p">
+    Welcome to [Gym Name], your neighborhood gym dedicated to helping you achieve your fitness goals. We are a simple gym focused on providing you with a comfortable and effective workout environment. Here's what you can expect from us:
+  </p>
+  <div class="about-meaning">
+    <div class="about-mean">
+      Convenient location and accessible hours to fit your busy schedule
+    </div>
+    <div class="about-mean">
+      A variety of quality fitness equipment, including cardio machines, weightlifting equipment, and functional training tools
+    </div>
+    <div class="about-mean">
+      Clean and well-maintained facilities to ensure a pleasant workout experience
+    </div>
+    <div class="about-mean">
+      Knowledgeable and friendly staff available to assist you and offer guidance
+    </div>
+    <div class="about-mean">
+      A supportive and inclusive atmosphere that welcomes individuals of all fitness levels
+    </div>
+    <div class="about-mean">
+      Motivational and energetic music to keep you pumped up during your workouts
+    </div>
+    <div class="about-mean">
+      An emphasis on personal accountability and self-motivation to help you stay on track
+    </div>
+    <div class="about-mean">
+      Simple and straightforward membership options without any hidden fees or complicated contracts
+    </div>
+  </div>
+  <p id="contact">Contact</p>
+  <div class="contact-icon">
+    <div class="contact">
+      <div>
+        <img class="icons" src="call.png" alt="">
+      </div>
+      <div class="icon-name">
+        PHONE NUMBER
+      </div>
+      <div class="details">
+        09876543210
+      </div>
+    </div>
+    <div class="contact">
+      <div>
+        <img class="icons" src="gmail.png" alt="">
+      </div>
+      <div class="icon-name">
+        EMAIL
+      </div>
+      <div class="details">
+        gym@gmail.com
+      </div>
+    </div>
+    <div class="contact">
+      <div>
+        <img class="icons" src="location.png" alt="">
+      </div>
+      <div class="icon-name">
+        LOCATION
+      </div>
+      <div class="details">
+        Brgy. Sto Ni&#241o Abuyog, Leyte
+      </div>
+    </div>
+  </div>
+  <div class="contact-form">
+    <div class="contact-us">
+      Contact Form
+    </div>
+    <div>
+      <form class="forms" action="">
+        <input class="name-input" type="Text" name="Name"
+         placeholder="Name:" required>
+         <input class="name-input" type="Text" name="Number"
+         placeholder="Phone Number:" required>  
+         <textarea class="message" type="text" name="Message" placeholder="Message..." required></textarea>
+         <button class="send-button" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
